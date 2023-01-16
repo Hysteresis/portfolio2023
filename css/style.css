@@ -1,0 +1,29 @@
+body{
+        background: linear-gradient(-45deg, #110343, #13023a, #0b3a4b, #040c0a);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+
+.nav-link{
+    color: whitesmoke !important;
+
+}
+.nav-link:hover{
+    text-decoration : underline;
+    text-underline-position: under left;
+    text-underline-offset: 5px;
+}
