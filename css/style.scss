@@ -1,0 +1,315 @@
+body {
+    background: linear-gradient(-45deg, #110343, #13023a, #0b3a4b, #040c0a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gif-alistar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-link {
+    color: whitesmoke;
+    /* animation: gradientNav 2s ease infinite; */
+}
+
+
+.nav-link:hover {
+    text-decoration: underline overline;
+    text-underline-position: under;
+    text-underline-offset: 5px;
+    color: #f7dc54 !important;
+    animation: navbar 0.5s ease;
+}
+
+@keyframes navbar {
+    0% {
+        text-underline-offset: 8px;
+
+    }
+
+    50% {
+        text-underline-offset: 1px;
+    }
+
+    100% {
+        text-underline-offset: 5px;
+    }
+}
+
+
+
+.spinnerLoader {
+    height: 300px;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+
+
+//! debut effet glass card 
+
+/* From https://css.glass */
+.card {
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: whitesmoke;
+}
+
+//!fin effet glass card 
+
+//? ======================= STARS STARS
+@mixin sp-layout {
+    @media screen and (max-width: 750px) {
+        @content;
+    }
+}
+
+@function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min +floor($rand * (($max - $min) + 1));
+    @return $random_range;
+}
+
+.stars {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 50%;
+    height: 90%;
+    transform: rotate(-45deg);
+}
+
+.star {
+    @function randomNum($min, $max) {
+        $rand: random();
+        $randomNum: $min +floor($rand * (($max - $min) + 1));
+
+        @return $randomNum;
+    }
+
+    //   #{randomNum(200, 255)}
+    $star-count: 50;
+    // --star-color: var(--secondary-color);
+    --star-color: rgb(#{randomNum(200, 255)}, #{randomNum(220, 250)}, #{randomNum(230, 250)}) !important;
+    --star-tail-length: 6em;
+    --star-tail-height: 1px;
+    --star-width: calc(var(--star-tail-length) / 9);
+    --fall-duration: 10s;
+    --tail-fade-duration: var(--fall-duration);
+
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    color: var(--star-color);
+    background: linear-gradient(45deg, currentColor, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px currentColor);
+    transform: translate3d(104em, 0, 0);
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+    tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+
+    @include sp-layout {
+        // For mobile performance, tail-fade animation will be removed QAQ
+        animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+    }
+
+    @for $i from 1 through $star-count {
+        &:nth-child(#{$i}) {
+            --star-tail-length: #{random_range(500em, 750em) / 100};
+            --top-offset: #{random_range(0vh, 10000vh) / 100};
+            --fall-duration: #{random_range(6000, 12000s) / 1000};
+            --fall-delay: #{random_range(0, 10000s) / 1000};
+        }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: calc(var(--star-width) / -2);
+        width: var(--star-width);
+        height: 100%;
+        background: linear-gradient(45deg, transparent, currentColor, transparent);
+        border-radius: inherit;
+        animation: blink 2s linear infinite;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translate3d(-30em, 0, 0);
+    }
+}
+
+@keyframes tail-fade {
+
+    0%,
+    50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+    }
+
+    70%,
+    80% {
+        width: 0;
+        opacity: 0.4;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.6;
+    }
+}
+
+//?==== fin STARS STARS
+
+
+//!========== debut animation couleur du texte
+
+.containerText {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.anim-text-flow,
+.anim-text-flow-hover:hover {
+    /* Animation variables*/
+    $animationSteps: 10;
+    $animationDuration: 10;
+    $animationElement: span;
+    $animationElementsCount: 10;
+    $delayBetweenLetters: 0.2;
+
+    /* Elements settings*/
+    #{$animationElement} {
+        animation-name: anim-text-flow-keys;
+        animation-duration: #{$animationDuration}s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+    }
+
+    /* Keyframe loop*/
+    @keyframes anim-text-flow-keys {
+        @for $i from 0 through $animationSteps {
+            #{percentage($i * (1 / $animationSteps))} {
+                color: hsla(random(365), 60, 60, 1);
+            }
+        }
+    }
+
+    /** Element animation delay loop*/
+    $totalDelayTime: $animationElementsCount * $delayBetweenLetters;
+
+    @for $i from 1 through $animationElementsCount {
+        #{$animationElement}:nth-of-type(#{$i}) {
+            animation-delay: #{($i * $delayBetweenLetters) - $totalDelayTime}s;
+        }
+    }
+}
+
+.txt {
+    display: block;
+    font-size: 10vw;
+    font-weight: 300;
+    // font-family: 'Ubuntu';
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 2;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .txt {
+        font-size: 12vw;
+        @keyframes gradient {
+            0% {
+                background-position: center;
+            }
+        
+            100% {
+                background-position: center;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .txt {
+        font-size: 8vw;
+    }
+}
+
+@media only screen and (min-width : 1224px) {
+    .txt {
+        font-size: 8vw;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+
+//! fin animation couleur du texte
+
+
+#bgContact {
+    background-image: url(/img/fxVE.gif);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
