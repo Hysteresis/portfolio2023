@@ -2,21 +2,8 @@
 body {
   background: linear-gradient(-45deg, #110343, #13023a, #0b3a4b, #040c0a);
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   height: 100vh;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -41,25 +28,16 @@ body {
   /* animation: gradientNav 2s ease infinite; */
 }
 
+a {
+  color: yellow;
+}
+
 .nav-link:hover {
   text-decoration: underline overline;
   text-underline-position: under;
   text-underline-offset: 5px;
   color: #f7dc54 !important;
-  -webkit-animation: navbar 0.5s ease;
-          animation: navbar 0.5s ease;
-}
-
-@-webkit-keyframes navbar {
-  0% {
-    text-underline-offset: 8px;
-  }
-  50% {
-    text-underline-offset: 1px;
-  }
-  100% {
-    text-underline-offset: 5px;
-  }
+  animation: navbar 0.5s ease;
 }
 
 @keyframes navbar {
@@ -102,7 +80,7 @@ body {
 }
 
 .star {
-  --star-color: rgb(220, 223, 236) !important;
+  --star-color: rgb(240, 232, 238) !important;
   --star-tail-length: 6em;
   --star-tail-height: 1px;
   --star-width: calc(var(--star-tail-length) / 9);
@@ -118,314 +96,312 @@ body {
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(104em, 0, 0);
-  -webkit-animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-          animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
 }
 @media screen and (max-width: 750px) {
   .star {
-    -webkit-animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
-            animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
   }
 }
 .star:nth-child(1) {
-  --star-tail-length: 7.34em;
-  --top-offset: 45.51vh;
-  --fall-duration: 10.836s;
-  --fall-delay: 9.537s;
+  --star-tail-length: 7.13em;
+  --top-offset: 81.42vh;
+  --fall-duration: 7.701s;
+  --fall-delay: 6.216s;
 }
 .star:nth-child(2) {
-  --star-tail-length: 7.27em;
-  --top-offset: 53.13vh;
-  --fall-duration: 10.648s;
-  --fall-delay: 7.505s;
+  --star-tail-length: 6.72em;
+  --top-offset: 34.82vh;
+  --fall-duration: 11.174s;
+  --fall-delay: 6.184s;
 }
 .star:nth-child(3) {
-  --star-tail-length: 5.41em;
-  --top-offset: 22.64vh;
-  --fall-duration: 6.7s;
-  --fall-delay: 6.616s;
+  --star-tail-length: 6.18em;
+  --top-offset: 43.52vh;
+  --fall-duration: 6.254s;
+  --fall-delay: 6.679s;
 }
 .star:nth-child(4) {
-  --star-tail-length: 7.34em;
-  --top-offset: 50.33vh;
-  --fall-duration: 7.651s;
-  --fall-delay: 2.499s;
+  --star-tail-length: 6.32em;
+  --top-offset: 26.81vh;
+  --fall-duration: 11.837s;
+  --fall-delay: 4.326s;
 }
 .star:nth-child(5) {
-  --star-tail-length: 5.8em;
-  --top-offset: 64.76vh;
-  --fall-duration: 11.597s;
-  --fall-delay: 3.151s;
+  --star-tail-length: 5.45em;
+  --top-offset: 50.04vh;
+  --fall-duration: 7.567s;
+  --fall-delay: 9.589s;
 }
 .star:nth-child(6) {
-  --star-tail-length: 5.05em;
-  --top-offset: 92.1vh;
-  --fall-duration: 11.204s;
-  --fall-delay: 0.121s;
+  --star-tail-length: 6.52em;
+  --top-offset: 55.95vh;
+  --fall-duration: 7.438s;
+  --fall-delay: 1.237s;
 }
 .star:nth-child(7) {
-  --star-tail-length: 6.85em;
-  --top-offset: 67.24vh;
-  --fall-duration: 10.155s;
-  --fall-delay: 2.342s;
+  --star-tail-length: 6.21em;
+  --top-offset: 37.04vh;
+  --fall-duration: 11.481s;
+  --fall-delay: 2.287s;
 }
 .star:nth-child(8) {
-  --star-tail-length: 5.78em;
-  --top-offset: 62.93vh;
-  --fall-duration: 6.051s;
-  --fall-delay: 8.074s;
+  --star-tail-length: 5.83em;
+  --top-offset: 83.74vh;
+  --fall-duration: 8.692s;
+  --fall-delay: 8.725s;
 }
 .star:nth-child(9) {
-  --star-tail-length: 6.84em;
-  --top-offset: 35.06vh;
-  --fall-duration: 11.198s;
-  --fall-delay: 5.43s;
+  --star-tail-length: 6.63em;
+  --top-offset: 42.54vh;
+  --fall-duration: 7.161s;
+  --fall-delay: 4.691s;
 }
 .star:nth-child(10) {
-  --star-tail-length: 6.93em;
-  --top-offset: 54.18vh;
-  --fall-duration: 6.064s;
-  --fall-delay: 3.588s;
+  --star-tail-length: 5.05em;
+  --top-offset: 54.22vh;
+  --fall-duration: 9.672s;
+  --fall-delay: 0.825s;
 }
 .star:nth-child(11) {
-  --star-tail-length: 6.38em;
-  --top-offset: 83.09vh;
-  --fall-duration: 7.581s;
-  --fall-delay: 1.661s;
+  --star-tail-length: 5.23em;
+  --top-offset: 72.75vh;
+  --fall-duration: 8.875s;
+  --fall-delay: 0.605s;
 }
 .star:nth-child(12) {
-  --star-tail-length: 7.47em;
-  --top-offset: 80.91vh;
-  --fall-duration: 11.698s;
-  --fall-delay: 8.72s;
+  --star-tail-length: 6.05em;
+  --top-offset: 9.19vh;
+  --fall-duration: 8.684s;
+  --fall-delay: 2.242s;
 }
 .star:nth-child(13) {
-  --star-tail-length: 5.19em;
-  --top-offset: 93.7vh;
-  --fall-duration: 7.094s;
-  --fall-delay: 5.489s;
+  --star-tail-length: 5.23em;
+  --top-offset: 61.71vh;
+  --fall-duration: 6.252s;
+  --fall-delay: 8.832s;
 }
 .star:nth-child(14) {
-  --star-tail-length: 7.23em;
-  --top-offset: 42.61vh;
-  --fall-duration: 11.463s;
-  --fall-delay: 6.792s;
+  --star-tail-length: 5.76em;
+  --top-offset: 26.83vh;
+  --fall-duration: 9.651s;
+  --fall-delay: 7.945s;
 }
 .star:nth-child(15) {
-  --star-tail-length: 6.21em;
-  --top-offset: 96.02vh;
-  --fall-duration: 10.823s;
-  --fall-delay: 1.637s;
+  --star-tail-length: 7.35em;
+  --top-offset: 37.7vh;
+  --fall-duration: 8.119s;
+  --fall-delay: 8.814s;
 }
 .star:nth-child(16) {
-  --star-tail-length: 5.48em;
-  --top-offset: 62.93vh;
-  --fall-duration: 11.488s;
-  --fall-delay: 1.716s;
+  --star-tail-length: 7.26em;
+  --top-offset: 80.54vh;
+  --fall-duration: 6.318s;
+  --fall-delay: 0.041s;
 }
 .star:nth-child(17) {
-  --star-tail-length: 5.37em;
-  --top-offset: 48.53vh;
-  --fall-duration: 9.719s;
-  --fall-delay: 1.877s;
+  --star-tail-length: 6.84em;
+  --top-offset: 95.18vh;
+  --fall-duration: 7.472s;
+  --fall-delay: 6.222s;
 }
 .star:nth-child(18) {
-  --star-tail-length: 6.47em;
-  --top-offset: 53.79vh;
-  --fall-duration: 10.188s;
-  --fall-delay: 8.609s;
+  --star-tail-length: 5.62em;
+  --top-offset: 37.85vh;
+  --fall-duration: 11.525s;
+  --fall-delay: 3.564s;
 }
 .star:nth-child(19) {
-  --star-tail-length: 5.62em;
-  --top-offset: 55.01vh;
-  --fall-duration: 9.214s;
-  --fall-delay: 0.653s;
+  --star-tail-length: 5.41em;
+  --top-offset: 30.79vh;
+  --fall-duration: 7.412s;
+  --fall-delay: 3.524s;
 }
 .star:nth-child(20) {
-  --star-tail-length: 6.07em;
-  --top-offset: 82.11vh;
-  --fall-duration: 11.754s;
-  --fall-delay: 5.664s;
+  --star-tail-length: 6.43em;
+  --top-offset: 33vh;
+  --fall-duration: 10.801s;
+  --fall-delay: 5.641s;
 }
 .star:nth-child(21) {
-  --star-tail-length: 6.38em;
-  --top-offset: 43.93vh;
-  --fall-duration: 10.396s;
-  --fall-delay: 9.141s;
+  --star-tail-length: 5.6em;
+  --top-offset: 49.23vh;
+  --fall-duration: 7.058s;
+  --fall-delay: 1.024s;
 }
 .star:nth-child(22) {
-  --star-tail-length: 5.97em;
-  --top-offset: 99.53vh;
-  --fall-duration: 7.26s;
-  --fall-delay: 6.858s;
+  --star-tail-length: 5.29em;
+  --top-offset: 17.67vh;
+  --fall-duration: 7.508s;
+  --fall-delay: 9.413s;
 }
 .star:nth-child(23) {
-  --star-tail-length: 7.42em;
-  --top-offset: 22.87vh;
-  --fall-duration: 10.571s;
-  --fall-delay: 3.474s;
+  --star-tail-length: 6.4em;
+  --top-offset: 97.83vh;
+  --fall-duration: 11.14s;
+  --fall-delay: 2.584s;
 }
 .star:nth-child(24) {
-  --star-tail-length: 5.21em;
-  --top-offset: 9.34vh;
-  --fall-duration: 6.198s;
-  --fall-delay: 4.346s;
+  --star-tail-length: 5.58em;
+  --top-offset: 58.55vh;
+  --fall-duration: 11.303s;
+  --fall-delay: 1.889s;
 }
 .star:nth-child(25) {
-  --star-tail-length: 6.07em;
-  --top-offset: 95.5vh;
-  --fall-duration: 6.098s;
-  --fall-delay: 3.279s;
+  --star-tail-length: 6.94em;
+  --top-offset: 7.5vh;
+  --fall-duration: 11.234s;
+  --fall-delay: 9.836s;
 }
 .star:nth-child(26) {
-  --star-tail-length: 6.7em;
-  --top-offset: 35.87vh;
-  --fall-duration: 10.853s;
-  --fall-delay: 7.2s;
+  --star-tail-length: 7.39em;
+  --top-offset: 9.91vh;
+  --fall-duration: 9.022s;
+  --fall-delay: 9.74s;
 }
 .star:nth-child(27) {
-  --star-tail-length: 5.27em;
-  --top-offset: 58.07vh;
-  --fall-duration: 6.441s;
-  --fall-delay: 6.386s;
+  --star-tail-length: 6.49em;
+  --top-offset: 11.26vh;
+  --fall-duration: 8.943s;
+  --fall-delay: 7.247s;
 }
 .star:nth-child(28) {
-  --star-tail-length: 5.13em;
-  --top-offset: 56.71vh;
-  --fall-duration: 9.925s;
-  --fall-delay: 6.788s;
+  --star-tail-length: 7.35em;
+  --top-offset: 58.42vh;
+  --fall-duration: 10.545s;
+  --fall-delay: 3.814s;
 }
 .star:nth-child(29) {
-  --star-tail-length: 7.38em;
-  --top-offset: 55.91vh;
-  --fall-duration: 7.056s;
-  --fall-delay: 4.464s;
+  --star-tail-length: 5.49em;
+  --top-offset: 90.05vh;
+  --fall-duration: 9.423s;
+  --fall-delay: 3.46s;
 }
 .star:nth-child(30) {
-  --star-tail-length: 6.47em;
-  --top-offset: 51.94vh;
-  --fall-duration: 8.672s;
-  --fall-delay: 1.722s;
+  --star-tail-length: 5.24em;
+  --top-offset: 79.27vh;
+  --fall-duration: 6.806s;
+  --fall-delay: 4.901s;
 }
 .star:nth-child(31) {
-  --star-tail-length: 7.38em;
-  --top-offset: 38.65vh;
-  --fall-duration: 6.682s;
-  --fall-delay: 3.303s;
+  --star-tail-length: 7.25em;
+  --top-offset: 31.64vh;
+  --fall-duration: 7.729s;
+  --fall-delay: 3.613s;
 }
 .star:nth-child(32) {
-  --star-tail-length: 5.37em;
-  --top-offset: 10.69vh;
-  --fall-duration: 6.622s;
-  --fall-delay: 8.022s;
+  --star-tail-length: 6.02em;
+  --top-offset: 19.17vh;
+  --fall-duration: 6.466s;
+  --fall-delay: 8.834s;
 }
 .star:nth-child(33) {
-  --star-tail-length: 6.15em;
-  --top-offset: 14.52vh;
-  --fall-duration: 8.163s;
-  --fall-delay: 9.299s;
+  --star-tail-length: 5.97em;
+  --top-offset: 4.3vh;
+  --fall-duration: 6.328s;
+  --fall-delay: 4.7s;
 }
 .star:nth-child(34) {
-  --star-tail-length: 6.61em;
-  --top-offset: 32.9vh;
-  --fall-duration: 7.677s;
-  --fall-delay: 6.583s;
+  --star-tail-length: 5.9em;
+  --top-offset: 9.53vh;
+  --fall-duration: 10.068s;
+  --fall-delay: 4.716s;
 }
 .star:nth-child(35) {
-  --star-tail-length: 6.38em;
-  --top-offset: 21.97vh;
-  --fall-duration: 8.301s;
-  --fall-delay: 2.128s;
+  --star-tail-length: 6.3em;
+  --top-offset: 71.86vh;
+  --fall-duration: 7.29s;
+  --fall-delay: 6.624s;
 }
 .star:nth-child(36) {
-  --star-tail-length: 6em;
-  --top-offset: 21.56vh;
-  --fall-duration: 11.511s;
-  --fall-delay: 2.547s;
+  --star-tail-length: 6.45em;
+  --top-offset: 37.28vh;
+  --fall-duration: 9.551s;
+  --fall-delay: 7.064s;
 }
 .star:nth-child(37) {
-  --star-tail-length: 7.08em;
-  --top-offset: 35.21vh;
-  --fall-duration: 11.903s;
-  --fall-delay: 7.292s;
+  --star-tail-length: 5.42em;
+  --top-offset: 7.23vh;
+  --fall-duration: 10.306s;
+  --fall-delay: 0.468s;
 }
 .star:nth-child(38) {
-  --star-tail-length: 5.6em;
-  --top-offset: 41.81vh;
-  --fall-duration: 7.235s;
-  --fall-delay: 0.766s;
+  --star-tail-length: 5.93em;
+  --top-offset: 30.71vh;
+  --fall-duration: 7.244s;
+  --fall-delay: 6.389s;
 }
 .star:nth-child(39) {
-  --star-tail-length: 6.75em;
-  --top-offset: 31.5vh;
-  --fall-duration: 10.212s;
-  --fall-delay: 0.876s;
+  --star-tail-length: 5.86em;
+  --top-offset: 57.13vh;
+  --fall-duration: 7.969s;
+  --fall-delay: 7.991s;
 }
 .star:nth-child(40) {
-  --star-tail-length: 6.86em;
-  --top-offset: 75.25vh;
-  --fall-duration: 8.578s;
-  --fall-delay: 3.703s;
+  --star-tail-length: 6.28em;
+  --top-offset: 7.75vh;
+  --fall-duration: 8.269s;
+  --fall-delay: 8.201s;
 }
 .star:nth-child(41) {
-  --star-tail-length: 7.27em;
-  --top-offset: 33.19vh;
-  --fall-duration: 10.537s;
-  --fall-delay: 1.913s;
+  --star-tail-length: 5.25em;
+  --top-offset: 67.58vh;
+  --fall-duration: 6.961s;
+  --fall-delay: 1.712s;
 }
 .star:nth-child(42) {
-  --star-tail-length: 5.91em;
-  --top-offset: 94.16vh;
-  --fall-duration: 11.869s;
-  --fall-delay: 2.728s;
+  --star-tail-length: 5.3em;
+  --top-offset: 69.81vh;
+  --fall-duration: 6.767s;
+  --fall-delay: 5.832s;
 }
 .star:nth-child(43) {
-  --star-tail-length: 6.5em;
-  --top-offset: 80.42vh;
-  --fall-duration: 8.997s;
-  --fall-delay: 7.643s;
+  --star-tail-length: 5.3em;
+  --top-offset: 19.54vh;
+  --fall-duration: 7.815s;
+  --fall-delay: 1.691s;
 }
 .star:nth-child(44) {
-  --star-tail-length: 6.38em;
-  --top-offset: 94.25vh;
-  --fall-duration: 9.452s;
-  --fall-delay: 6.685s;
+  --star-tail-length: 7.06em;
+  --top-offset: 78.45vh;
+  --fall-duration: 10.74s;
+  --fall-delay: 1.424s;
 }
 .star:nth-child(45) {
-  --star-tail-length: 6.55em;
-  --top-offset: 3.6vh;
-  --fall-duration: 10.144s;
-  --fall-delay: 0.472s;
+  --star-tail-length: 6.88em;
+  --top-offset: 5.76vh;
+  --fall-duration: 10.111s;
+  --fall-delay: 6.368s;
 }
 .star:nth-child(46) {
-  --star-tail-length: 5.17em;
-  --top-offset: 26.98vh;
-  --fall-duration: 9.913s;
-  --fall-delay: 8.458s;
+  --star-tail-length: 6.87em;
+  --top-offset: 40.85vh;
+  --fall-duration: 10.686s;
+  --fall-delay: 8.786s;
 }
 .star:nth-child(47) {
-  --star-tail-length: 7.13em;
-  --top-offset: 41.21vh;
-  --fall-duration: 9.932s;
-  --fall-delay: 8.218s;
+  --star-tail-length: 5.89em;
+  --top-offset: 80.84vh;
+  --fall-duration: 7.831s;
+  --fall-delay: 0.584s;
 }
 .star:nth-child(48) {
-  --star-tail-length: 6.62em;
-  --top-offset: 28.2vh;
-  --fall-duration: 8.293s;
-  --fall-delay: 1.369s;
+  --star-tail-length: 5.59em;
+  --top-offset: 51.02vh;
+  --fall-duration: 9.09s;
+  --fall-delay: 6.194s;
 }
 .star:nth-child(49) {
-  --star-tail-length: 6.03em;
-  --top-offset: 30.27vh;
-  --fall-duration: 11.033s;
-  --fall-delay: 5.806s;
+  --star-tail-length: 6.64em;
+  --top-offset: 8.36vh;
+  --fall-duration: 7.907s;
+  --fall-delay: 7.875s;
 }
 .star:nth-child(50) {
-  --star-tail-length: 6.81em;
-  --top-offset: 42.26vh;
-  --fall-duration: 9.503s;
-  --fall-delay: 8.502s;
+  --star-tail-length: 5.73em;
+  --top-offset: 68.07vh;
+  --fall-duration: 9.471s;
+  --fall-delay: 3.526s;
 }
 .star::before, .star::after {
   position: absolute;
@@ -436,8 +412,7 @@ body {
   height: 100%;
   background: linear-gradient(45deg, transparent, currentColor, transparent);
   border-radius: inherit;
-  -webkit-animation: blink 2s linear infinite;
-          animation: blink 2s linear infinite;
+  animation: blink 2s linear infinite;
 }
 .star::before {
   transform: rotate(45deg);
@@ -446,29 +421,9 @@ body {
   transform: rotate(-45deg);
 }
 
-@-webkit-keyframes fall {
-  to {
-    transform: translate3d(-30em, 0, 0);
-  }
-}
-
 @keyframes fall {
   to {
     transform: translate3d(-30em, 0, 0);
-  }
-}
-@-webkit-keyframes tail-fade {
-  0%, 50% {
-    width: var(--star-tail-length);
-    opacity: 1;
-  }
-  70%, 80% {
-    width: 0;
-    opacity: 0.4;
-  }
-  100% {
-    width: 0;
-    opacity: 0;
   }
 }
 @keyframes tail-fade {
@@ -483,11 +438,6 @@ body {
   100% {
     width: 0;
     opacity: 0;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    opacity: 0.6;
   }
 }
 @keyframes blink {
@@ -513,136 +463,86 @@ body {
 }
 .anim-text-flow span,
 .anim-text-flow-hover:hover span {
-  -webkit-animation-name: anim-text-flow-keys;
-          animation-name: anim-text-flow-keys;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes anim-text-flow-keys {
-  0% {
-    color: hsl(50deg, 60%, 60%);
-  }
-  10% {
-    color: hsl(249deg, 60%, 60%);
-  }
-  20% {
-    color: hsl(179deg, 60%, 60%);
-  }
-  30% {
-    color: hsl(186deg, 60%, 60%);
-  }
-  40% {
-    color: hsl(200deg, 60%, 60%);
-  }
-  50% {
-    color: hsl(209deg, 60%, 60%);
-  }
-  60% {
-    color: hsl(276deg, 60%, 60%);
-  }
-  70% {
-    color: hsl(22deg, 60%, 60%);
-  }
-  80% {
-    color: hsl(355deg, 60%, 60%);
-  }
-  90% {
-    color: hsl(101deg, 60%, 60%);
-  }
-  100% {
-    color: hsl(300deg, 60%, 60%);
-  }
+  animation-name: anim-text-flow-keys;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 @keyframes anim-text-flow-keys {
   0% {
-    color: hsl(50deg, 60%, 60%);
+    color: hsl(56, 60%, 60%);
   }
   10% {
-    color: hsl(249deg, 60%, 60%);
+    color: hsl(68, 60%, 60%);
   }
   20% {
-    color: hsl(179deg, 60%, 60%);
+    color: hsl(48, 60%, 60%);
   }
   30% {
-    color: hsl(186deg, 60%, 60%);
+    color: hsl(194, 60%, 60%);
   }
   40% {
-    color: hsl(200deg, 60%, 60%);
+    color: hsl(135, 60%, 60%);
   }
   50% {
-    color: hsl(209deg, 60%, 60%);
+    color: hsl(343, 60%, 60%);
   }
   60% {
-    color: hsl(276deg, 60%, 60%);
+    color: hsl(173, 60%, 60%);
   }
   70% {
-    color: hsl(22deg, 60%, 60%);
+    color: hsl(101, 60%, 60%);
   }
   80% {
-    color: hsl(355deg, 60%, 60%);
+    color: hsl(93, 60%, 60%);
   }
   90% {
-    color: hsl(101deg, 60%, 60%);
+    color: hsl(127, 60%, 60%);
   }
   100% {
-    color: hsl(300deg, 60%, 60%);
+    color: hsl(121, 60%, 60%);
   }
 }
 .anim-text-flow span:nth-of-type(1),
 .anim-text-flow-hover:hover span:nth-of-type(1) {
-  -webkit-animation-delay: -1.8s;
-          animation-delay: -1.8s;
+  animation-delay: -1.8s;
 }
 .anim-text-flow span:nth-of-type(2),
 .anim-text-flow-hover:hover span:nth-of-type(2) {
-  -webkit-animation-delay: -1.6s;
-          animation-delay: -1.6s;
+  animation-delay: -1.6s;
 }
 .anim-text-flow span:nth-of-type(3),
 .anim-text-flow-hover:hover span:nth-of-type(3) {
-  -webkit-animation-delay: -1.4s;
-          animation-delay: -1.4s;
+  animation-delay: -1.4s;
 }
 .anim-text-flow span:nth-of-type(4),
 .anim-text-flow-hover:hover span:nth-of-type(4) {
-  -webkit-animation-delay: -1.2s;
-          animation-delay: -1.2s;
+  animation-delay: -1.2s;
 }
 .anim-text-flow span:nth-of-type(5),
 .anim-text-flow-hover:hover span:nth-of-type(5) {
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
+  animation-delay: -1s;
 }
 .anim-text-flow span:nth-of-type(6),
 .anim-text-flow-hover:hover span:nth-of-type(6) {
-  -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
+  animation-delay: -0.8s;
 }
 .anim-text-flow span:nth-of-type(7),
 .anim-text-flow-hover:hover span:nth-of-type(7) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
+  animation-delay: -0.6s;
 }
 .anim-text-flow span:nth-of-type(8),
 .anim-text-flow-hover:hover span:nth-of-type(8) {
-  -webkit-animation-delay: -0.4s;
-          animation-delay: -0.4s;
+  animation-delay: -0.4s;
 }
 .anim-text-flow span:nth-of-type(9),
 .anim-text-flow-hover:hover span:nth-of-type(9) {
-  -webkit-animation-delay: -0.2s;
-          animation-delay: -0.2s;
+  animation-delay: -0.2s;
 }
 .anim-text-flow span:nth-of-type(10),
 .anim-text-flow-hover:hover span:nth-of-type(10) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .txt {
@@ -659,14 +559,6 @@ body {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .txt {
     font-size: 12vw;
-  }
-  @-webkit-keyframes gradient {
-    0% {
-      background-position: center;
-    }
-    100% {
-      background-position: center;
-    }
   }
   @keyframes gradient {
     0% {
