@@ -9,7 +9,7 @@
                 <div class="navbar-nav  justify-content-center">
                     <a class="nav-link ms-auto" id="item0" href="index.php?uc=home">Hello World</a>
                     <a class="nav-link ms-auto" id="item1" href="index.php?uc=creations">Créations</a>
-                    <a class="nav-link ms-auto" id="item2" href="index.php?uc=parcours">Parcours</a>
+                    <!-- <a class="nav-link ms-auto" id="item2" href="index.php?uc=parcours">Parcours</a> -->
                     <a class="nav-link ms-auto" id="item3" href="index.php?uc=contact">Contact</a>
                 </div>
             </div>
