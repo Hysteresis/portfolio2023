@@ -1,13 +1,17 @@
 <?php
+
+if(!isset($_GET['uc']) ){
+    header('Location: index.php?uc=pokemon&offset=0');
+}
+
 include './vue/navbar.php';
 include './vue/search.php';
 include './modele/Pokemon.php';
+// if(empty($_GET['uc'])){
+//     include './controller/pokemon_controller.php';  
 
-if(empty($_GET['uc'])){
-    // include './controller/pokemon_controller.php';  
-    header('location: index.php?uc=pokemon&offset=0' );
             
-}
+// }
 
 ?>
 
@@ -27,10 +31,10 @@ if(empty($_GET['uc'])){
 
 <?php 
 
+
     if( $_GET['uc'] == 'pokemon' || $_GET['uc'] == 'offset'){
         include './controller/pokemon_controller.php';   
     }
-
     
     if(isset($_GET['uc'])&& $_GET['uc'] == 'evolution_pokemon'){
         include './controller/evolution_pokemon_controller.php';

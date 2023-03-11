@@ -18,7 +18,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<!--  -->
 	<link rel="stylesheet" href="./css/style.css">
-	<title>Document</title>
+	<title>CV Stracraft</title>
 </head>
 
 <body>
@@ -95,7 +95,7 @@
 			</div>
 
 			<div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center" >
-				<a class="btn my-4 mx-auto px-4 py-3" id="btn_continue" href="#" role="button">Continue</a>
+				<a class="btn my-4 mx-auto px-4 py-3" id="btn_continue" href="#formation" role="button">Continue</a>
 				<div class="card_container" id="card2">
 					<div class="card card_initial " style="width: 18rem;">						
 						<div class="front2">

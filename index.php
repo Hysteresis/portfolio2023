@@ -1,4 +1,9 @@
+<?php
+if(!isset($_GET['uc']) ){
+    header('Location: index.php?uc=home');
+}
 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,13 +30,18 @@
 <body>
 
 <?php 
+include 'env.php';
+$urlprod = 'Location: https://www.gameauver.com/index.php?uc=home';
+$urldev = 'Location: index.php?uc=home';
+
+// header($urldev);
 
 
 
 if(isset($_GET['uc'])){
     include './controller/' . $_GET['uc'] . '_controller.php';
 } else {
-    header('location: index.php?uc=home');
+    header($urlprod);
 }
 ?>
 
