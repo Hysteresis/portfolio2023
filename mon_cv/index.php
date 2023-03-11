@@ -55,27 +55,24 @@
 				<h2 class="text-center" id="titre1" >Développeur Web</h2>
 				<h2 class="text-center mt-4"  id="titre2" >Concepteur d'applications</h2>
 				<div class="d-flex flex-wrap justify-content-center align-item-center my-5">
-					<a class="btn  mx-2 my-2" id="btn_generator" href="#" role="button">Border Generator</a>
-					<a class="btn mx-2 my-2" id="btn_convertisseur" href="#" role="button">Color Converter</a>
+					<a class="btn  mx-2 my-2 px-4 py-3" id="btn_generator" href="#" role="button">Border Generator</a>
+					<a class="btn mx-2 my-2 px-4 py-3"" id="btn_convertisseur" href="#" role="button">Color Converter</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container formation">
+	<div class="container formation" id="formation">
 		<div class="row  pt-5 pt-md-5 pt-lg-5 ">
 			<div class="col-12 pt-5">
 				<h2 class="text-center titleForamtion">-= &emsp13; Formation &emsp13; =-</h2>
 			</div>
 
-			<div class="col-6 d-flex flex-column justify-content-center align-items-center">
-				<a class="btn my-2 mx-auto" id="btn_initiale" href="#" role="button">Initiale</a>
-				<div class="card_container">
+			<div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center " >
+				<a class="btn my-4 mx-auto px-4 py-3" id="btn_initiale" href="#formation" role="button">Initiale</a>
+				<div class="card_container" id="card1">
 					<div class="card card_initial " style="width: 18rem;">
-						
 						<div class="front1">
-
 						</div>
-							
 						<div class="back1">
 							<!-- <div class="card_initial_content d-flex justify-content-center align-items-center">
 								<iframe src="https://giphy.com/embed/kaSmOXonvq8z2DLGxg" width="200" height="auto" frameBorder="0" class="maarine" allowFullScreen></iframe>
@@ -97,20 +94,14 @@
 				</div>
 			</div>
 
-
-			<div class="col-6 d-flex flex-column justify-content-center align-items-center">
-			<a class="btn my-2 mx-auto" id="btn_continue" href="#" role="button">Continue</a>
-				<div class="card_container">
-					<div class="card card_initial " style="width: 18rem;">
-						
+			<div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center" >
+				<a class="btn my-4 mx-auto px-4 py-3" id="btn_continue" href="#" role="button">Continue</a>
+				<div class="card_container" id="card2">
+					<div class="card card_initial " style="width: 18rem;">						
 						<div class="front2">
-
-						</div>
-							
+						</div>			
 						<div class="back2">
-							<!-- <div class="card_initial_content d-flex justify-content-center align-items-center">
-								<iframe src="https://giphy.com/embed/kaSmOXonvq8z2DLGxg" width="200" height="auto" frameBorder="0" class="maarine" allowFullScreen></iframe>
-							</div> -->
+
 							<div class="card-body card_initial_content">
 								<h5 class="card-title">CDA</h5>
 								<p class="card-text">Concepteur Développeur d'applications en 2023</p>
@@ -119,7 +110,6 @@
 								<h5 class="card-title">Développeur Web</h5>
 								<p class="card-text">en 2022</p>
 							</div>
-
 						</div>
 					</div>	
 				</div>
@@ -128,9 +118,17 @@
 		</div>
 	</div>
 
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2 class="text-center">Section suivante</h2>					
+			</div>
+		</div>
+	</div>
 
 	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="js/titre-letter.js"></script>
+	<script src="js/display-card.js"></script>
 </body>
 
 </html>

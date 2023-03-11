@@ -1,0 +1,37 @@
+body{
+
+    background-image: url('/api_pokemon/assets/image/card/pikachu_nuit.png') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+}
+
+.bgPikachu{
+    
+    background: rgba(39,43,46,0.7);
+
+}
+
+#minus, #plus {
+    background-color: rgba(184, 5, 61, 0.95);
+    border-color:rgba(202, 6, 104, 0.95);
+    transition: transform 0.2s ease-in-out;
+  }
+
+
+#minus:hover, #plus:hover {
+    background-color: rgba(16, 168, 52, 0.95);
+    border-color:rgba(16, 168, 52, 0.95);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.08);
+  }
+
+
+#logo{
+    height: 200px;
+    width: auto;
+}
+
+
