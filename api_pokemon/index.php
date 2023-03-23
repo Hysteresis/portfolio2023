@@ -28,7 +28,34 @@ include './modele/Pokemon.php';
 
 </head>
 <body>
+    <?php
+// test du csv
+// Charger le fichier CSV des noms de Pokémon
+$pokemonNames = [];
+if (($handle = fopen("pokemon_names.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        // Ajouter chaque nom de Pokémon dans le tableau
+        $pokemonNames[] = $data;
+        // var_dump($data);
+    }
+    fclose($handle);
+}
 
+// Rechercher le nom en français du Pokémon numéro 1 (Bulbizarre)
+$pokemonId = 2;
+$pokemonNameFr = '';
+foreach ($pokemonNames as $row) {
+    if ($row[0] == $pokemonId && $row[1] == 5) {
+        $pokemonNameFr = $row[2];
+        break;
+    }
+}
+
+// Afficher le nom en français du Pokémon
+// echo "Le nom est :" . $pokemonNameFr;
+
+//fin test csv
+?>
 <?php 
 
 

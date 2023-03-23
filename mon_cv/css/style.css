@@ -95,7 +95,7 @@ body{
 }
 
 .card_container{
-    height: 300px;
+    height: 320px;
 
 
 }
@@ -114,7 +114,7 @@ body{
 
 
 .front1{
-    height: 300px;
+    height: 320px;
     width: 18rem;
     background-image: url('/mon_cv/img/nexus.webp');
     background-position: center;
@@ -126,7 +126,7 @@ body{
 
 }
 .back1{
-    height: 300px;
+    height: 320px;
     width: 18rem;
     transform: rotateY(180deg);
     border-style: solid;
@@ -142,7 +142,7 @@ body{
 
 
 .front2{
-    height: 300px;
+    height: 320px;
     width: 18rem;
     background-image: url('/mon_cv/img/command_center.webp');
     background-position: center;
@@ -154,7 +154,7 @@ body{
 
 }
 .back2{
-    height: 300px;
+    height: 320px;
     width: 18rem;
     transform: rotateY(180deg);
     border-style: solid;
@@ -185,10 +185,6 @@ h2{
 }
 
 
-
-/* font-family: 'Orbitron', sans-serif; */
-/* font-family: 'Michroma', sans-serif; */
-
 #background-video {
     height: 100vh;
     width: 100vw;
@@ -200,23 +196,15 @@ h2{
     bottom: 0;
     z-index: -1;
     padding: 0px 0px;
-    }
+}
 
 .formation{
-    margin-top: -27px;
-    /* background-image: url('/mon_cv/img/starcraft1.jpg'); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
+    height: 100vh;
+    /* margin-top: -27px; */
     font-family: 'Michroma', sans-serif; 
     color: whitesmoke;
     z-index: 20;
-
-
     object-fit: fill;
-    
-    /* position: relative; */
-    /* -webkit-mask: linear-gradient(to bottom , transparent, #000 1%);
-    mask: linear-gradient(to bottom , transparent, #000 1%); */
 }
 
 
@@ -227,18 +215,16 @@ h2{
         z-index: 10 !important;
     }
 
-        .formation{
-            /* height: auto; */
-            /* width: 100vw; */
-            object-fit: fill;
-            /* position: absolute; */
-        }
+    .formation{
+        height: 120vh;
+        object-fit: fill;
+    }
 }
 
 
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28204, 230, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
+}
 
 /* Set the border color to the desired color */
 .custom-toggler.navbar-toggler {
@@ -276,6 +262,57 @@ h2{
     text-shadow: rgba(0,187,255,1) 50px 100px 390px !important;
     border-bottom: solid #CCE6FF !important;
     border-width: 2px !important;
+}
+
+#experiencesProfessionnelles{
+    background: url("/mon_cv/img/starcraft-2-ia.avif") no-repeat;
+    background-size: cover;
+    -webkit-mask: linear-gradient(to bottom, transparent, #000 25%);
+    mask: linear-gradient(to bottom, transparent, #000 255%);
+    height: 100vh;
+}
+
+
+.experiencesProfessionnelles .card{
+    border-color: #1d7fff;
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+}
+
+
+.experiencesProfessionnelles .card:hover{
+    border-color: #3889f4;
+    border-width: 3px;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+
+
+.experiencesProfessionnelles .card .inconXp{
+    height: 80px;
+    filter: brightness(150%);
+    -webkit-filter: brightness(150%);
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+}
+
+
+.card-blur {
+    -webkit-box-shadow: inset 15px 15px 15px 50px rgba(63, 178, 249, 0.445);
+    box-shadow: inset 15px 15px 15px 50px rgba(63, 178, 249, 0.445);
+    -moz-box-shadow: inset 15px 15px 15px 50px rgba(63, 178, 249, 0.445);
+    z-index: 5000;
+    filter: drop-shadow(0 0 0.75rem pink);
+    box-shadow: #0061df;
+    text-shadow: greenyellow;
+
+}
+
+.card img{
+    z-index: -1000;
 }
 
 

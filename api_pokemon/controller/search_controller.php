@@ -1,6 +1,6 @@
 <?php
 
-$onePokemon = Pokemon::getOnePokemonByName($_POST['search']);
+$onePokemon = Pokemon::getOnePokemonByName(strtolower($_POST['search']));
 
 
 include './vue/info.php';

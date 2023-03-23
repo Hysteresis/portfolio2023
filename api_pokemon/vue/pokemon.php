@@ -38,6 +38,8 @@
                         <div class="d-flex justify-content-around">
                             <p class="card-text">Taille : <?= $onePokemon[0]->getHeight() ?> </p>
                             <p class="card-text">Poids : <?= $onePokemon[0]->getWeight() ?> </p>
+                            
+
                         </div>
                         <div class="d-flex justify-content-around">
                             <a href="index.php?uc=info&id=<?= $onePokemon[0]->getId() ?>" class="btn btn-primary">+ info</a>

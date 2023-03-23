@@ -10,10 +10,11 @@
 
         <span class="visually-hidden">Loading...</span>
     </div>
-</div>
+</div>a
 
 <!-- cadre et texte animé -->
 
 <div class="containerText">
     <span class="txt anim-text-flow">Welcome</span>
+    
 </div>

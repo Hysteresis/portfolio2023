@@ -123,6 +123,8 @@ class Pokemon {
     //     return $arrayPokemon;
     // }
 
+
+    
     public static function getOnePokemonByName($name){
         $url = "https://pokeapi.co/api/v2/pokemon/". $name;
 
@@ -133,19 +135,14 @@ class Pokemon {
 
         $result = curl_exec($ch); 
         $result = json_decode($result, true);
-        // var_dump($result['height']);
-        // echo "<pre>";
-        // print_r($result);
-        // echo "<pre>";
-        
         curl_close($ch); 
         $arrayPokemon = []; 
         
-           $arrayPokemon[] = new self($result['id'], $result['name'], $result['types'][0]['type']['name'], $result['weight'],  $result['height']);
+        $arrayPokemon[] = new self($result['id'], $result['name'], $result['types'][0]['type']['name'], $result['weight'],  $result['height']);
         //    echo "<pre>";
         //     print_r($arrayPokemon);
         //     echo "<pre>";
-        
+    //    var_dump($result['abilities'][0]['ability']['name']);
         
         return $arrayPokemon;
     }
