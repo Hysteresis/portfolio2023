@@ -1,32 +1,35 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	font-family: "Exo", sans-serif;
-	color: #fff;
-	background: linear-gradient(-45deg, #05051b, #020211, #050525, #040118);
-	background-size: 400% 400%;
-	animation: gradientBG 15s ease infinite;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Exo", sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #05051b, #020211, #050525, #040118);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
 @keyframes gradientBG {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-#btn_generator, #btn_initiale{
-    background-image: linear-gradient(180deg,rgba(0,0,0,.9),rgba(102,68,0,.9));
+#btn_generator,
+#btn_initiale {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(102, 68, 0, .9));
     color: rgb(255, 201, 93);
     font-weight: 500;
     letter-spacing: .07em;
@@ -42,15 +45,17 @@ body{
     border-radius: 0.4rem;
 }
 
-#btn_generator:hover, #btn_initiale:hover{
+#btn_generator:hover,
+#btn_initiale:hover {
     transform: scale(1.05);
     color: rgb(255, 209, 118);
     border-color: rgb(253, 193, 73);
-    background-image: linear-gradient(180deg,rgba(41, 28, 1, 0.9),rgba(186, 126, 7, 0.9));
+    background-image: linear-gradient(180deg, rgba(41, 28, 1, 0.9), rgba(186, 126, 7, 0.9));
 }
 
-#btn_convertisseur,  #btn_continue{
-    background-image: linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,51,102,.9));
+#btn_convertisseur,
+#btn_continue {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 51, 102, .9));
     color: #187cff;
     font-weight: 500;
     letter-spacing: .07em;
@@ -61,24 +66,24 @@ body{
     font-family: 'Michroma', sans-serif;
     text-align: center;
     text-decoration: none;
-    transition: color .2s,filter .2s,opacity .2s,transform .2s;
+    transition: color .2s, filter .2s, opacity .2s, transform .2s;
     border: solid;
     border-color: #0061df;
     border-radius: 0.4rem;
     line-height: 1;
-
 }
 
-#btn_convertisseur:hover, #btn_continue:hover{
+#btn_convertisseur:hover,
+#btn_continue:hover {
     transform: scale(1.05);
     color: rgb(98, 177, 255);
     border-color: #3c91ff;
-    background-image: linear-gradient(180deg,rgba(41, 28, 1, 0.9),rgba(0, 87, 174, 0.9));
+    background-image: linear-gradient(180deg, rgba(41, 28, 1, 0.9), rgba(0, 87, 174, 0.9));
 }
 
-.card_initial{
+.card_initial {
     /* background-xcolor : #3c91ff; */
-    position : static;
+    position: static;
     background-image: url('/mon_cv/img/terran_logo.png');
     background-position: center;
     background-size: contain;
@@ -88,32 +93,31 @@ body{
     border-color: rgb(2, 76, 173);
 }
 
-.card{
+.card {
     position: static;
     transition: transform 800ms;
     transform-style: preserve-3d;
 }
 
-.card_container{
+.card_container {
     height: 320px;
-
-
 }
 
-.card_container:hover > .card{
-    cursor:pointer;
+.card_container:hover>.card {
+    cursor: pointer;
     transform: rotateY(180deg);
-    
+
 
 }
 
-.front1, .back1{
+.front1,
+.back1 {
     position: absolute;
     backface-visibility: hidden;
 }
 
 
-.front1{
+.front1 {
     height: 320px;
     width: 18rem;
     background-image: url('/mon_cv/img/nexus.webp');
@@ -123,9 +127,9 @@ body{
     border-style: solid;
     border-width: 3px;
     border-color: rgb(2, 76, 173);
-
 }
-.back1{
+
+.back1 {
     height: 320px;
     width: 18rem;
     transform: rotateY(180deg);
@@ -135,13 +139,14 @@ body{
 }
 
 
-.front2, .back2{
+.front2,
+.back2 {
     position: absolute;
     backface-visibility: hidden;
 }
 
 
-.front2{
+.front2 {
     height: 320px;
     width: 18rem;
     background-image: url('/mon_cv/img/command_center.webp');
@@ -151,9 +156,9 @@ body{
     border-style: solid;
     border-width: 3px;
     border-color: rgb(2, 76, 173);
-
 }
-.back2{
+
+.back2 {
     height: 320px;
     width: 18rem;
     transform: rotateY(180deg);
@@ -163,24 +168,24 @@ body{
 }
 
 
-.card_initial_content{
-    font-family: 'Orbitron', sans-serif;  
-    background-color:  rgba(0, 11, 22, 0.808);
+.card_initial_content {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgba(0, 11, 22, 0.808);
 }
 
 
-.video_height{
+.video_height {
     height: 20%;
     width: 100vw;
 }
 
-.titreVideo{
+.titreVideo {
     height: 80vh;
 }
 
-h2{
-    font-family: 'Michroma', sans-serif;    
-    text-shadow: 0 0 4px #0f0f0f, 0 0 5px #0f0f0f, 0 0 10px #0f0f0f, 0 0 20px #050f1d, 0 0 30px #0055c3, 0 0 40px #186dff , 0 0 50px #00399a;
+h2 {
+    font-family: 'Michroma', sans-serif;
+    text-shadow: 0 0 4px #0f0f0f, 0 0 5px #0f0f0f, 0 0 10px #0f0f0f, 0 0 20px #050f1d, 0 0 30px #0055c3, 0 0 40px #186dff, 0 0 50px #00399a;
     color: rgb(210, 210, 210);
 }
 
@@ -198,10 +203,10 @@ h2{
     padding: 0px 0px;
 }
 
-.formation{
+.formation {
     height: 100vh;
     /* margin-top: -27px; */
-    font-family: 'Michroma', sans-serif; 
+    font-family: 'Michroma', sans-serif;
     color: whitesmoke;
     z-index: 20;
     object-fit: fill;
@@ -209,13 +214,13 @@ h2{
 
 
 @media only screen and (min-device-width : 100px) and (max-device-width : 990px) {
-    .navbar{
+    .navbar {
         background: none;
         color: rgb(255, 240, 252);
         z-index: 10 !important;
     }
 
-    .formation{
+    .formation {
         height: 120vh;
         object-fit: fill;
     }
@@ -231,22 +236,21 @@ h2{
     border-color: rgb(20, 149, 229);
 }
 
-.navbar ul{
-    font-family: 'Orbitron', sans-serif;    
+.navbar ul {
+    font-family: 'Orbitron', sans-serif;
     border: solid #0983b7da !important;
     border-width: 2px !important;
-    background: rgb(26,48,84);
+    background: rgb(26, 48, 84);
     background: linear-gradient(180deg, rgba(2, 17, 42, 0.861) 13%, rgba(8, 21, 80, 0.846) 76%);
     margin-bottom: -20px;
     padding: 10px 20px;
-
 }
 
-.navbar-toggler{
+.navbar-toggler {
     color: #ccffd5fd !important;
 }
 
-.nav-link{
+.nav-link {
     color: #CCE6FF !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
@@ -256,31 +260,30 @@ h2{
 }
 
 .nav-link:hover {
-    background-image: linear-gradient(180deg,rgba(1, 34, 70, 0.9),rgba(0, 87, 174, 0.9));
+    background-image: linear-gradient(180deg, rgba(1, 34, 70, 0.9), rgba(0, 87, 174, 0.9));
     margin-bottom: -14px !important;
     padding-top: -19px !important;
-    text-shadow: rgba(0,187,255,1) 50px 100px 390px !important;
+    text-shadow: rgba(0, 187, 255, 1) 50px 100px 390px !important;
     border-bottom: solid #CCE6FF !important;
     border-width: 2px !important;
 }
 
-#experiencesProfessionnelles{
+#experiencesProfessionnelles {
     background: url("/mon_cv/img/starcraft-2-ia.avif") no-repeat;
     background-size: cover;
     -webkit-mask: linear-gradient(to bottom, transparent, #000 25%);
     mask: linear-gradient(to bottom, transparent, #000 255%);
-    height: 100vh;
 }
 
 
-.experiencesProfessionnelles .card{
+.experiencesProfessionnelles .card {
     border-color: #1d7fff;
     filter: brightness(60%);
     -webkit-filter: brightness(60%);
 }
 
 
-.experiencesProfessionnelles .card:hover{
+.experiencesProfessionnelles .card:hover {
     border-color: #3889f4;
     border-width: 3px;
     filter: brightness(100%);
@@ -288,13 +291,13 @@ h2{
 }
 
 
-.experiencesProfessionnelles .card .inconXp{
+.experiencesProfessionnelles .card .inconXp {
     height: 80px;
     filter: brightness(150%);
     -webkit-filter: brightness(150%);
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.02);
     transition-duration: 0.3s;
 }
@@ -308,11 +311,41 @@ h2{
     filter: drop-shadow(0 0 0.75rem pink);
     box-shadow: #0061df;
     text-shadow: greenyellow;
-
 }
 
-.card img{
+.card img {
     z-index: -1000;
 }
+
+
+.imgFront {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgFront img {
+    height: 5em;
+    /* transform: rotateX(90deg); */
+    /* animation: skewImg 3s infinite; */
+}
+
+/* @keyframes skewImg {
+    100% {
+        transform: rotateX(0deg);
+    } */
+
+    /* 50% {
+        transform: rotateX(180deg);
+    } */
+    /* from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+      } 
+}*/
 
 

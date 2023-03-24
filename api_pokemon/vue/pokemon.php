@@ -18,13 +18,9 @@
         <?php
 
         foreach ($allPokemon['results'] as $pokemon) {
-            // var_dump($pokemon['name']);
+
             $onePokemon = Pokemon::getOnePokemonByName($pokemon['name']);
-            // echo "<pre>";
-            // print_r($onePokemon[0]->getId());
-            // echo "<pre>";
-
-
+            
         ?>
             <div class="col">
                 <div class="card mx-auto bg-dark text-white" style="width: 18rem;">
@@ -32,7 +28,9 @@
 
                     <div class="card-body">
                         <div class="d-flex justify-content-around align-items-center">
-                            <h5 class="card-title">#<?php echo $onePokemon[0]->getId() ?> <?= ucfirst($pokemon['name'])   ?></h5>
+                            <h5 class="card-title">#<?php echo $onePokemon[0]->getId() ?> 
+                            <?php $onePo = Pokemon::getPokemon($onePokemon[0]->getId());?>
+                            <h5><?=ucfirst($onePo['names'][4]['name'])?></h5>
                             <h6>Type : <?= ucfirst($onePokemon[0]->getType()) ?></h6>
                         </div>
                         <div class="d-flex justify-content-around">
@@ -49,6 +47,15 @@
             </div>
 
         <?php  } ?>
+
+
+
+<?php
+
+
+
+?>
+
 
 
     </div>

@@ -103,28 +103,32 @@ class Pokemon {
      return $results;
     }
 
+    public static function getPokemon($id) {
+ 
+        $curl = curl_init();
 
-    // public static function getOnePokemonId($id){
-    //     $url = "https://pokeapi.co/api/v2/pokemon/". $id;
+       curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://pokeapi.co/api/v2/pokemon-species/$id",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+       ));
 
-    //     $ch = curl_init();
-    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    //     curl_setopt($ch, CURLOPT_URL, $url); 
-    //     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-    //     $result = curl_exec($ch); 
-    //     $result = json_decode($result, true);
-
-    //     curl_close($ch); 
-
-    //     $arrayPokemon = []; 
-    //     $arrayPokemon[] = new self($result['id'], $result['name'], $result['type'], $result['weight'], $result['height']);
-
-    //     return $arrayPokemon;
-    // }
+       $response = curl_exec($curl);
+       $res = json_decode($response, true);
+       curl_close($curl);
 
 
-    
+
+       return $res;
+
+       }
+
+       
     public static function getOnePokemonByName($name){
         $url = "https://pokeapi.co/api/v2/pokemon/". $name;
 

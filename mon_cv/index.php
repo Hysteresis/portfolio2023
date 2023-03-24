@@ -40,7 +40,7 @@
 						<a class="nav-link" aria-current="page" href="#experiencesProfessionnelles">Expériences professionelles</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="#">Compétences</a>
+						<a class="nav-link" aria-current="page" href="#competences">Compétences</a>
 					</li>
 				</ul>
 			</div>
@@ -54,10 +54,10 @@
 			<div class="col-10  d-flex flex-column  justify-content-center align-item-center  mx-auto titreVideo">
 				<h2 class="text-center" id="titre1">Développeur Web</h2>
 				<h2 class="text-center mt-4" id="titre2">Concepteur d'applications</h2>
-				<div class="d-flex flex-wrap justify-content-center align-item-center my-5">
+				<!-- <div class="d-flex flex-wrap justify-content-center align-item-center my-5">
 					<a class="btn  mx-2 my-2 px-4 py-3" id="btn_generator" href="#" role="button">Border Generator</a>
 					<a class="btn mx-2 my-2 px-4 py-3" id="btn_convertisseur" href="#" role="button">Color Converter</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -119,13 +119,13 @@
 
 	<!--! exp professionelles -->
 	<div id="experiencesProfessionnelles">
-		<div class="container" >
-			<div class="row pt-5" >
+		<div class="container py-5" >
+			<div class="row py-5 " >
 				<div class="col-12 py-5">
 					<h2 class="text-center titleFormation">-= &emsp13; Expériences professionelles &emsp13; =-</h2>
 				</div>
 			</div>
-			<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="row row-cols-1 row-cols-md-3 g-4 py-5">
 				<div class="col experiencesProfessionnelles">
 					<div class="card">
 						<div class="card card-blur">
@@ -172,24 +172,89 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row mt-5">
+	<!-- smartphone et tablet -->
+	<div class="container d-sm-block d-md-block d-lg-none">
+		<div class="row my-5">
 			<div class="col-12">
 				<h2 class="text-center titleFormation">-= &emsp13; Front end &emsp13; =-</h2>
-
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="figma" src="/mon_cv/img/figma.png" alt="">
+				<img class="m-2" id="html" src="/mon_cv/img/html.png" alt="">
+				<img class="m-2" id="css" src="/mon_cv/img/css.png" alt="">
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="sass" src="/mon_cv/img/sass.png" alt="">
+				<img class="m-2" id="bs" src="/mon_cv/img/bs.png" alt="">
+				<img class="m-2" id="js" src="/mon_cv/img/js.png" alt="">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<h2 class="text-center titleFormation">-= &emsp13; Front back &emsp13; =-</h2>
-
+				<h2 class="text-center titleFormation">-= &emsp13; Back end &emsp13; =-</h2>
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="php" src="/mon_cv/img/php.png" alt="">
+				<img class="m-2" id="sf" src="/mon_cv/img/sf.png" alt="">
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="mysql" src="/mon_cv/img/mysql.png" alt="">
+				<img class="m-2" id="phpmyadmin" src="/mon_cv/img/phpmyadmin.png" alt="">
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="kotlin" src="/mon_cv/img/kotlin.png" alt="">
 			</div>
 		</div>
 	</div>
+	<!-- PC -->
+	<div class="container d-none d-lg-block"  id="competences">
+		<div class="row my-5">
+			<div class="col-12">
+				<h2 class="text-center titleFormation">-= &emsp13; Front end &emsp13; =-</h2>
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="figma" src="/mon_cv/img/figma.png" alt="">
+				<img class="m-2" id="html" src="/mon_cv/img/html.png" alt="">
+				<img class="m-2" id="css" src="/mon_cv/img/css.png" alt="">
+				<img class="m-2" id="sass" src="/mon_cv/img/sass.png" alt="">
+				<img class="m-2" id="bs" src="/mon_cv/img/bs.png" alt="">
+				<img class="m-2" id="js" src="/mon_cv/img/js.png" alt="">
+			</div>
+		</div>
+		<div class="row my-5">
+			<div class="col-12">
+				<h2 class="text-center titleFormation">-= &emsp13; Back end &emsp13; =-</h2>
+			</div>
+			<div class="col-12 py-5 imgFront d-flex justify-content-evenly">
+				<img class="m-2" id="php" src="/mon_cv/img/php.png" alt="">
+				<img class="m-2" id="sf" src="/mon_cv/img/sf.png" alt="">
+				<img class="m-2" id="mysql" src="/mon_cv/img/mysql.png" alt="">
+				<img class="m-2" id="phpmyadmin" src="/mon_cv/img/phpmyadmin.png" alt="">
+				<img class="m-2" id="kotlin" src="/mon_cv/img/kotlin.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+
+	</div>
+
+	<div class="container  my-5">
+
+		<footer class="py-3 my-4">
+			<ul class="nav justify-content-center border-top pt-3 mt-3">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Back to Top</a></li>
+			</ul>
+			<p class="text-center text-muted pt-3 mt-3">2023 - Gameauver Prod</p>
+		</footer>
+	</div>
+
+
 
 	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="js/titre-letter.js"></script>
 	<script src="js/display-card.js"></script>
+	<script src="js/front.js"></script>
 </body>
 
 </html>
